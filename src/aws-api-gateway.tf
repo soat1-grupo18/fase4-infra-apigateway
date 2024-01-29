@@ -180,6 +180,7 @@ resource "aws_api_gateway_rest_api" "this" {
             type                 = "HTTP_PROXY"
             uri                  = "http://${data.aws_lb.eks_ingress.dns_name}/ms-producao/pedidos"
           }
+        }
       }
       "/pedidos/{param1}/{param2}" = {
         put = {
